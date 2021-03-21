@@ -4,7 +4,7 @@ p "Input a city to view current weather."
 userCity = gets.chomp
 
 
-weather = HTTP.get("http://api.openweathermap.org/data/2.5/weather?q=#{userCity}&appid=9b47e03139e2b9f69fb428cf5bee786c&units=imperial").parse
+weather = HTTP.get("http://api.openweathermap.org/data/2.5/weather?q=#{userCity}&appid=APIKEY&units=imperial").parse
 
 
 
@@ -22,6 +22,14 @@ high =  weather['main']['temp_max']
 low =  weather['main']['temp_min']
 
 wind_speed =  weather['wind']['speed']
+
+
+
+if userCity == "chicago"
+  p "awesome!"
+else 
+  p "oh"
+end
 
 
 
